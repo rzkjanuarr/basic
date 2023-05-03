@@ -59,6 +59,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <?= $form->field($model, 'username') ?>
 
+                <?= $form->field($model, 'golongan_darah')->dropDownList($golonganDarah, ['class' => 'form-control', 'prompt' => 'pilih golongan darah']) ?>
+
                 <?= $form->field($model, 'body')->textarea(['rows' => 6]) ?>
 
                 <?= $form->field($model, 'verifyCode')->widget(Captcha::class, [

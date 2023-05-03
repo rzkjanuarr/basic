@@ -110,6 +110,7 @@ class SiteController extends Controller
 
         $contactForm = new \app\models\ContactForm();
         $mediaSosial = $contactForm->mediaSosial();
+        $golonganDarah = $contactForm->golonganDarah();
 
         if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
             Yii::$app->session->setFlash('contactFormSubmitted');
@@ -119,6 +120,7 @@ class SiteController extends Controller
         return $this->render('contact', [
             'model' => $model,
             'mediaSosial' => $mediaSosial,
+            'golonganDarah' => $golonganDarah,
         ]);
     }
 

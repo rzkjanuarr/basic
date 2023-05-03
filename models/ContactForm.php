@@ -19,6 +19,7 @@ class ContactForm extends Model
     public $media_sosial;
     public $username;
     public $alamat_rumah;
+    public $golongan_darah;
 
     /**
      * @return array the validation rules.
@@ -77,5 +78,16 @@ class ContactForm extends Model
             'Whatsapp' => 'Whatsapp',
         ];
         return $media_sosial;
+    }
+
+    public function golonganDarah()
+    {
+        $golongan_darah = [
+            'A' => 'A',
+            'B' => 'B',
+            'AB' => 'AB',
+            'O' => 'O',
+        ];
+        return $golongan_darah;
     }
 }
