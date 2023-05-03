@@ -40,6 +40,11 @@ class PersonalController extends Controller
     {
         $searchModel = new PersonalSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
+        // $dataProvider->query->where(['jenis_kelamin' => 'Perempuan']);
+
+        // sek pending dulu
+        // $contactForm = new \app\models\ContactForm();
+        // $mediaSosial = $contactForm->mediaSosial();
 
         return $this->render('index', [
             'searchModel' => $searchModel,

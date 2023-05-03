@@ -6,6 +6,7 @@ use yii\helpers\Url;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
+
 /** @var yii\web\View $this */
 /** @var app\models\PersonalSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
@@ -15,7 +16,9 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="personal-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1>
+        <?= Html::encode($this->title) ?>
+    </h1>
 
     <p>
         <?= Html::a('Create Personal', ['create'], ['class' => 'btn btn-success']) ?>
@@ -26,16 +29,43 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
+        //'filterModel' => $searchModel, // search
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id_personal',
-            'nama_lengkap',
-            'nama_panggilan',
-            'jenis_kelamin',
-            'tempat_lahir',
-            //'tanggal_lahir',
+            // 'id_personal',
+            [
+                'header' => 'Nama Lengkap',
+                'headerOptions' => ['style' => 'text-align:center'],
+                'contentOptions' => ['style' => 'text-align:center'],
+                'value' => function ($model) {
+                        return $model->nama_lengkap;
+                    }
+            ],
+            // custom nama_lengkap
+            // 'nama_panggilan',
+            [
+                'header' => 'Jenis Kelamin',
+                'headerOptions' => ['style' => 'text-align:center'],
+                'contentOptions' => ['style' => 'text-align:center'],
+                'value' => function ($model) {
+                        return $model->jenis_kelamin;
+                    }
+            ],
+            [
+                'header' => 'Tempat Lahir',
+                'headerOptions' => ['style' => 'text-align:center'],
+                'contentOptions' => ['style' => 'text-align:center'],
+                'value' => function ($model) {
+                        return $model->tempat_lahir;
+                    }
+            ],
+            [
+                'header' => 'Tanggal Lahir',
+                'value' => function ($model) {
+                        return date('Y-m-d', strtotime($model->tanggal_lahir));
+                    }
+            ],
             //'status_perkawinan',
             //'agama',
             //'pendidikan',
@@ -46,8 +76,8 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, Personal $model, $key, $index, $column) {
-                    return Url::toRoute([$action, 'id_personal' => $model->id_personal]);
-                 }
+                        return Url::toRoute([$action, 'id_personal' => $model->id_personal]);
+                    }
             ],
         ],
     ]); ?>
