@@ -139,4 +139,12 @@ class SiteController extends Controller
             'hello' => $hello
         ]);
     }
+
+    public function actionKopiKenangan()
+    {
+        $menu = "Start today with a coffee!";
+        return $this->render('kopi-kenangan', [
+            'menu' => $menu
+        ]);
+    }
 }
