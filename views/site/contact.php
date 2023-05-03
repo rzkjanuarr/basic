@@ -53,6 +53,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <?= $form->field($model, 'subject') ?>
 
+                <?= $form->field($model, 'alamat_rumah')->label("Tempat Tinggal") ?>
+
                 <?= $form->field($model, 'media_sosial')->dropDownList($mediaSosial, ['class' => 'form-control', 'prompt' => 'pilih media sosial']) ?>
 
                 <?= $form->field($model, 'username') ?>

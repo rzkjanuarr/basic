@@ -18,7 +18,7 @@ class ContactForm extends Model
     public $no_hp;
     public $media_sosial;
     public $username;
-
+    public $alamat_rumah;
 
     /**
      * @return array the validation rules.
@@ -27,7 +27,7 @@ class ContactForm extends Model
     {
         return [
             // name, email, subject and body are required
-            [['name', 'email', 'subject', 'body', 'no_hp'], 'required'],
+            [['name', 'email', 'subject', 'body', 'no_hp', 'alamat_rumah'], 'required'],
             // email has to be a valid email address
             ['email', 'email'],
             [['media_sosial', 'username'], 'safe'],
