@@ -7,6 +7,8 @@ BDD Assertions for [PHPUnit][1] or [Codeception][2]
 [![Total Downloads](https://poser.pugx.org/codeception/verify/downloads)](https://packagist.org/packages/codeception/verify)
 [![Build Status](https://travis-ci.org/Codeception/Verify.png?branch=master)](https://travis-ci.org/Codeception/Verify)
 [![License](https://poser.pugx.org/codeception/specify/license)](https://packagist.org/packages/codeception/verify)
+[![StandWithUkraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://github.com/vshymanskyy/StandWithUkraine/blob/main/docs/README.md)
+
 
 This is very tiny wrapper for PHPUnit assertions, that are aimed to make tests a bit more readable.
 With [BDD][3] assertions influenced by [Chai][4], [Jasmine][5], and [RSpec][6] your assertions would be a bit closer to natural language.
@@ -140,11 +142,11 @@ Verify is open-sourced software licensed under the [MIT][9] License.
 © Codeception PHP Testing Framework
 
 [1]: https://phpunit.de/
-[2]: http://codeception.com/
+[2]: https://codeception.com/
 [3]: https://en.wikipedia.org/wiki/Behavior-driven_development
-[4]: http://chaijs.com/
-[5]: http://jasmine.github.io/
-[6]: http://rspec.info/
+[4]: https://chaijs.com/
+[5]: https://jasmine.github.io/
+[6]: https://rspec.info/
 [7]: /docs/supported_verifiers.md
 [8]: /docs/supported_expectations.md
 [9]: /LICENSE

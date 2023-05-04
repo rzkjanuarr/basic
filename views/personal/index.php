@@ -36,8 +36,8 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'id_personal',
             [
                 'header' => 'Nama Lengkap',
-                'headerOptions' => ['style' => 'text-align:center'],
-                'contentOptions' => ['style' => 'text-align:center'],
+                'headerOptions' => ['style' => 'text-align:left'],
+                'contentOptions' => ['style' => 'text-align:left'],
                 'value' => function ($model) {
                         return $model->nama_lengkap;
                     }
@@ -46,16 +46,16 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'nama_panggilan',
             [
                 'header' => 'Jenis Kelamin',
-                'headerOptions' => ['style' => 'text-align:center'],
-                'contentOptions' => ['style' => 'text-align:center'],
+                'headerOptions' => ['style' => 'text-align:left'],
+                'contentOptions' => ['style' => 'text-align:left'],
                 'value' => function ($model) {
                         return $model->jenis_kelamin;
                     }
             ],
             [
                 'header' => 'Tempat Lahir',
-                'headerOptions' => ['style' => 'text-align:center'],
-                'contentOptions' => ['style' => 'text-align:center'],
+                'headerOptions' => ['style' => 'text-align:left'],
+                'contentOptions' => ['style' => 'text-align:left'],
                 'value' => function ($model) {
                         return $model->tempat_lahir;
                     }
